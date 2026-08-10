@@ -1,0 +1,28 @@
+name: Benchmark scenario
+description: Propose an institutional invariant or adversarial case.
+title: "Benchmark: "
+body:
+  - type: markdown
+    attributes:
+      value: Use fictitious examples. Do not include personal, clinical, authentication or payment data.
+  - type: textarea
+    id: operating-rule
+    attributes:
+      label: Operating rule
+      description: State the invariant and cite its authoritative source.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence shape
+      description: Describe the minimum fixture and its effective and recorded time.
+    validations:
+      required: true
+  - type: textarea
+    id: failure
+    attributes:
+      label: Failure case
+      description: Describe the mutation the benchmark must reject.
+    validations:
+      required: true
