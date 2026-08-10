@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/heyrafiki/contract",
+  "revision": "b5319871b185544d21fefea625cba2f20877b42b",
+  "artifacts": {
+    "openapi.yaml": "cf2747ba4282bc79e81f69aca66937de78f067266e3dd5651edecdf531863dda",
+    "assurance/assurance-graph.json": "8532e7a561a23871deace3ded5b743ba67f3083457d7b57138c9e62844349099",
+    "fixtures/claim-valuation-timeline.json": "5fd61f5b41e00c14c574b5ff92fa3172de660ac0a28f6c7a7abde0bf5a727355",
+    "fixtures/financial-controls.json": "4b852250cf9782faf7ab6fa2eedcb76b21a5aa4866a1fc7dd00c3566c4fcc5c7"
+  }
+}
