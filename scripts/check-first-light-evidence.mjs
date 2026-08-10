@@ -17,11 +17,12 @@ const protocol = await load("protocol.json");
 const manifest = await load("manifest.json");
 
 for (const [name, expectedHash] of Object.entries(manifest.artifacts)) {
-  const bytes = await readFile(
+  const content = await readFile(
     new URL(`../benchmarks/first-light/v2/${name}`, import.meta.url),
+    "utf8",
   );
   assert.equal(
-    createHash("sha256").update(bytes).digest("hex"),
+    createHash("sha256").update(content.replace(/\r\n/g, "\n")).digest("hex"),
     expectedHash,
     `${name} must match the reviewed evidence manifest`,
   );
