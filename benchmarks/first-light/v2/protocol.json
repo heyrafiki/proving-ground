@@ -1,0 +1,19 @@
+{
+  "protocolId": "first-light-synthetic-dual-review",
+  "version": "2.0.0",
+  "immutable": true,
+  "reviewDesign": "blind_independent_dual_review_with_adjudication",
+  "reviewers": {
+    "reviewerA": "synthetic_practitioner_a",
+    "reviewerB": "synthetic_practitioner_b",
+    "adjudicator": "synthetic_practitioner_adjudicator",
+    "independent": true,
+    "mutuallyBlindedUntilDisposition": true
+  },
+  "analysisPlanVersion": "2.0.0",
+  "primaryMethodReference": "https://doi.org/10.1177/001316446002000104",
+  "missingBenchmarkOutcome": "Retain in cohort, report unresolved, and exclude from classification denominators.",
+  "missingReviewerDisposition": "Exclude from pairwise agreement and report as an unresolved pair.",
+  "bootstrapConfidenceIntervals": "omitted",
+  "interpretation": "Fixed-cohort conformance evidence with instrument- and population-specific clinical evaluation in a separate protocol."
+}
