@@ -3,9 +3,10 @@
 Executable conformance evidence for the Heyrafiki contract.
 
 Proving Ground turns institutional requirements into tests that engineers,
-actuaries, payers and reviewers can run from the same versioned evidence. The
-current suites cover public-contract accountability, Claim financial identity,
-bitemporal valuation and adversarial failure handling.
+actuaries, payers, Practitioners and reviewers can run from the same versioned
+evidence. The suites cover public-contract accountability, Claim financial
+identity, bitemporal valuation, early-identification controls and adversarial
+failure handling.
 
 ## Run the benchmark
 
@@ -25,6 +26,7 @@ A passing run verifies:
 | Contract coverage | OpenAPI validity, unique operations, authentication, typed errors and accountable capability ownership |
 | Financial identity | Integer minor units, balanced Claim lines, remittance allocation and settlement separation |
 | Bitemporal valuation | Effective time, recorded time, no future knowledge and reproducible as-of liability |
+| First Light evidence | Consent authority, tenant isolation, deterministic routing, blind dual review, longitudinal knowledge time and complete audit evidence |
 | Adversarial mutations | Duplicate, reordered, future-known, unbalanced and over-settled evidence is rejected |
 
 ## Read the result
@@ -37,6 +39,26 @@ The machine-readable result contract is in
 [`benchmark/manifest.json`](./benchmark/manifest.json). Pinned artifact hashes
 and the source contract revision are in
 [`contract-lock.json`](./contract-lock.json).
+
+## First Light
+
+First Light carries Screening signals into an accountable Practitioner review
+boundary. The public evidence pack reproduces 48 versioned fixtures across
+self, caregiver and Practitioner responder paths. It verifies Consent before
+read or action, tenant isolation, minimum-necessary model context, blind dual
+review, effective and recorded time, and 24 adverse boundaries.
+
+Start with the [Pilot Evidence Pack](./benchmarks/first-light/v2/pilot-evidence-pack.md),
+inspect the [methodology](./benchmarks/first-light/v2/methodology.md), verify the
+[reviewed artifact manifest](./benchmarks/first-light/v2/manifest.json), and run:
+
+```bash
+npm run test:first-light
+```
+
+The [Evidence Boundary](./benchmarks/first-light/v2/evidence-boundary.md) keeps
+fixed-cohort conformance measurement precise while instrument- and
+population-specific clinical evaluation carries its own reviewed protocol.
 
 ## Add an institutional scenario
 

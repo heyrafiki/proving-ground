@@ -1,0 +1,291 @@
+{
+  "object": "first_light_pilot_evidence_pack",
+  "version": "2.0.0",
+  "generatedFrom": {
+    "benchmarkId": "first-light-synthetic-pilot-v2",
+    "benchmarkVersion": "2.0.0",
+    "protocolId": "first-light-synthetic-dual-review",
+    "protocolVersion": "2.0.0",
+    "analysisPlanVersion": "2.0.0"
+  },
+  "cohortManifest": {
+    "data": "synthetic_only",
+    "caseCount": 48,
+    "responderRoles": {
+      "self": 17,
+      "caregiver": 16,
+      "practitioner": 15
+    },
+    "languageTags": {
+      "en": 24,
+      "sw": 23,
+      "sw-KE": 1
+    },
+    "realPersonData": false,
+    "questionnaireWording": false
+  },
+  "instrument": {
+    "canonicalId": "heyrafiki.synthetic.first-light-6",
+    "version": "1.0.0",
+    "itemVersion": "synthetic-items-1",
+    "scoringRuleVersion": "synthetic-sum-1",
+    "licenceState": "synthetic_only",
+    "evidenceUse": "conformance_fixture"
+  },
+  "controlMapping": [
+    {
+      "control": "Consent authority",
+      "evidence": "Current persisted Consent is checked before read or action."
+    },
+    {
+      "control": "Tenant isolation",
+      "evidence": "Clinical relationships include tenant ownership."
+    },
+    {
+      "control": "Deterministic routing",
+      "evidence": "Urgency is derived only from the versioned route."
+    },
+    {
+      "control": "Human accountability",
+      "evidence": "Models cannot clear risk, dismiss signals, or authorize Care."
+    },
+    {
+      "control": "Minimum necessary context",
+      "evidence": "Read and model records exclude raw answers and identity."
+    },
+    {
+      "control": "Knowledge time",
+      "evidence": "Effective and recorded times remain separate and append-only."
+    },
+    {
+      "control": "Reproducibility",
+      "evidence": "The fixture, protocol, analysis plan, and renderer are versioned."
+    }
+  ],
+  "benchmarkResults": {
+    "cohortSize": 48,
+    "resolvedForClassification": 44,
+    "confusionMatrix": {
+      "truePositive": 17,
+      "trueNegative": 15,
+      "falsePositive": 5,
+      "falseNegative": 7,
+      "unresolved": 4
+    },
+    "sensitivity": 0.708333,
+    "specificity": 0.75,
+    "positivePredictiveValue": 0.772727,
+    "negativePredictiveValue": 0.681818,
+    "balancedAccuracy": 0.729167,
+    "reviewOverrideRate": 0.272727,
+    "unresolvedRate": 0.083333,
+    "timeToReviewSeconds": {
+      "count": 43,
+      "minimum": 60,
+      "median": 1620,
+      "maximum": 172800
+    },
+    "reviewerAgreement": {
+      "pairCount": 46,
+      "unresolvedPairs": 2,
+      "exactAgreement": 0.869565,
+      "cohensKappa": 0.775974,
+      "kappaState": "reported",
+      "disagreementsAdjudicated": 6
+    },
+    "interpretation": "synthetic_reference_label_conformance"
+  },
+  "adverseCaseResults": {
+    "count": 24,
+    "passed": 24,
+    "cases": [
+      {
+        "id": "pilot-005",
+        "category": "missing_two",
+        "passed": true,
+        "outcome": "missing_answers",
+        "route": null
+      },
+      {
+        "id": "pilot-007",
+        "category": "false_positive",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "practitioner_review"
+      },
+      {
+        "id": "pilot-008",
+        "category": "false_negative",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "no_signal"
+      },
+      {
+        "id": "pilot-009",
+        "category": "contradictory_responder",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "practitioner_review"
+      },
+      {
+        "id": "pilot-010",
+        "category": "contradictory_responder",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "no_signal"
+      },
+      {
+        "id": "pilot-011",
+        "category": "late_amendment",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "no_signal"
+      },
+      {
+        "id": "pilot-012",
+        "category": "consent_revocation",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "practitioner_review"
+      },
+      {
+        "id": "pilot-013",
+        "category": "stale_review",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "practitioner_review"
+      },
+      {
+        "id": "pilot-014",
+        "category": "language_mismatch",
+        "passed": true,
+        "outcome": "language_not_validated",
+        "route": null
+      },
+      {
+        "id": "pilot-015",
+        "category": "untrusted_input",
+        "passed": true,
+        "outcome": "invalid_answers",
+        "route": null
+      },
+      {
+        "id": "pilot-016",
+        "category": "access_isolation",
+        "passed": true,
+        "outcome": "authorization_denied",
+        "route": null
+      },
+      {
+        "id": "pilot-017",
+        "category": "unsafe_draft_output",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "no_signal"
+      },
+      {
+        "id": "pilot-018",
+        "category": "crisis_boundary",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "crisis_review"
+      },
+      {
+        "id": "pilot-019",
+        "category": "retry_integrity",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "no_signal"
+      },
+      {
+        "id": "pilot-020",
+        "category": "already_reviewed",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "practitioner_review"
+      },
+      {
+        "id": "pilot-021",
+        "category": "false_positive",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "practitioner_review"
+      },
+      {
+        "id": "pilot-022",
+        "category": "false_negative",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "no_signal"
+      },
+      {
+        "id": "pilot-029",
+        "category": "false_positive",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "practitioner_review"
+      },
+      {
+        "id": "pilot-030",
+        "category": "false_negative",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "no_signal"
+      },
+      {
+        "id": "pilot-035",
+        "category": "crisis_boundary",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "crisis_review"
+      },
+      {
+        "id": "pilot-037",
+        "category": "false_positive",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "practitioner_review"
+      },
+      {
+        "id": "pilot-038",
+        "category": "false_negative",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "no_signal"
+      },
+      {
+        "id": "pilot-043",
+        "category": "false_positive",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "practitioner_review"
+      },
+      {
+        "id": "pilot-044",
+        "category": "false_negative",
+        "passed": true,
+        "outcome": "recorded",
+        "route": "no_signal"
+      }
+    ]
+  },
+  "reviewerAgreement": {
+    "pairCount": 46,
+    "unresolvedPairs": 2,
+    "exactAgreement": 0.869565,
+    "cohensKappa": 0.775974,
+    "kappaState": "reported",
+    "disagreementsAdjudicated": 6
+  },
+  "auditCompleteness": {
+    "completeCases": 48,
+    "expectedCases": 48,
+    "rate": 1
+  },
+  "evidenceBoundaryRef": "contracts/benchmarks/first-light/v2/evidence-boundary.md",
+  "evidenceBoundary": {
+    "cohort": "The reported measures are exact conformance results over the fixed 48-case fixture set.",
+    "clinicalEvaluation": "Instrument- and population-specific clinical evaluation uses its own reviewed protocol."
+  },
+  "access": "Authorized reviewers inspect the complete versioned evidence. Licensed instrument configurations are activated through the governed instrument registry."
+}

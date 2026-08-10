@@ -1,0 +1,15 @@
+{
+  "id": "heyrafiki-first-light-conformance",
+  "version": "2.0.0",
+  "published_on": "2026-08-10",
+  "license": "Apache-2.0",
+  "artifacts": {
+    "evidence-boundary.md": "51d00695367475a2623cf112704fe081f4c0dddb40517ecef26bfcbf3ff5d7bd",
+    "expected-results.json": "ff395479c1bd43b540851eaffd695eea3a9ea9d30bd25aad959e25ba9a8199fa",
+    "fixtures.json": "a951f91196c3c1208331f71254ecd3b74558520831384c2a267ff68ec2eed9bc",
+    "methodology.md": "75b02dcf3da1701714d3545555240083f8930ba6a2632b292f8c11d444724fe6",
+    "pilot-evidence-pack.json": "8f3587fecc6020835c8bd7f316f36dc8e34693ab94d084b073c2ce2089fc343a",
+    "pilot-evidence-pack.md": "b8ffee1b1e154cc8818bf0f6a9e066f3fd25a46dc308dba10afff6f52c6bb63b",
+    "protocol.json": "fffcaf5668e1cb544edc2563f09f161eb6e60516add6548ca12f5627ef1bf752"
+  }
+}

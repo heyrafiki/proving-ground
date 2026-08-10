@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "published_on": "2026-08-10",
   "license": "Apache-2.0",
-  "scope": "Synthetic conformance evidence for mental-health Care, insurance operations and financial control boundaries.",
+  "scope": "Versioned conformance evidence for mental-health Care, early identification, insurance operations and financial control boundaries.",
   "contract": {
     "openapi_version": "1.0.0",
     "operation_count": 31,
@@ -26,11 +26,15 @@
     {
       "id": "adversarial-mutations",
       "asserts": ["duplicate event rejected", "out-of-order knowledge rejected", "future knowledge rejected", "unbalanced adjudication rejected", "over-settlement rejected"]
+    },
+    {
+      "id": "first-light-evidence",
+      "asserts": ["48 versioned fixtures", "Consent and tenant boundaries", "deterministic routing", "blind dual review", "complete audit evidence", "24 adverse boundaries"]
     }
   ],
   "reference_result": {
     "status": "pass",
-    "positive_scenarios": 4,
+    "positive_scenarios": 5,
     "adversarial_scenarios_rejected": 5,
     "claim_events": 7,
     "payer_liability": 450000,
