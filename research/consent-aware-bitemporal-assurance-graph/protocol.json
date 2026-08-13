@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_version": "0.1.0",
+  "status": "draft_for_independent_review",
+  "claim_state": "no_novelty_claim",
+  "reviewed_on": "2026-08-14",
+  "results_in_this_revision": false,
+  "synthetic_data_only": true,
+  "candidate": "consent_aware_bitemporal_assurance_graph",
+  "research_question": "Does combining consent state, effective time, recorded time, accountable capability ownership and executable evidence in one queryable assurance graph improve decision reconstruction and policy-failure detection over simpler traceability, provenance and temporal-ledger baselines?",
+  "baselines": [
+    { "id": "B0", "name": "static_traceability_matrix" },
+    { "id": "B1", "name": "provenance_graph_without_consent_or_bitemporal_queries" },
+    { "id": "B2", "name": "bitemporal_event_ledger_without_assurance_links" },
+    { "id": "B3", "name": "consent_aware_single_time_assurance_graph" }
+  ],
+  "metrics": [
+    { "id": "M1", "name": "decision_reconstruction_exactness", "direction": "higher" },
+    { "id": "M2", "name": "consent_authorization_exactness", "direction": "higher" },
+    { "id": "M3", "name": "mutation_rejection_rate", "direction": "higher" },
+    { "id": "M4", "name": "evidence_path_completeness", "direction": "higher" },
+    { "id": "M5", "name": "minimum_necessary_disclosure_violations", "direction": "lower" },
+    { "id": "M6", "name": "median_reconstruction_latency_ms", "direction": "lower" },
+    { "id": "M7", "name": "artifact_authoring_minutes", "direction": "lower" }
+  ],
+  "prior_art": [
+    { "id": "PA1", "authority": "W3C PROV-O", "url": "https://www.w3.org/TR/prov-o/" },
+    { "id": "PA2", "authority": "HL7 FHIR Consent", "url": "https://hl7.org/fhir/consent.html" },
+    { "id": "PA3", "authority": "HL7 FHIR Provenance", "url": "https://hl7.org/fhir/provenance.html" },
+    { "id": "PA4", "authority": "HL7 FHIR ResearchStudy", "url": "https://hl7.org/fhir/researchstudy.html" },
+    { "id": "PA5", "authority": "OMG SACM 2.0", "url": "https://www.omg.org/spec/SACM/2.0/" },
+    { "id": "PA6", "authority": "Snodgrass TQuel temporal model", "url": "https://www2.cs.arizona.edu/~rts/pubs/TODS87.pdf" }
+  ],
+  "review_gates": [
+    { "id": "G1", "required_before": "protocol_freeze", "name": "independent_prior_art_review" },
+    { "id": "G2", "required_before": "evaluation", "name": "baseline_implementation_review" },
+    { "id": "G3", "required_before": "evaluation", "name": "fixture_and_mutation_freeze" },
+    { "id": "G4", "required_before": "contribution_claim", "name": "independent_result_replication" },
+    { "id": "G5", "required_before": "novelty_claim", "name": "research_and_legal_review" }
+  ],
+  "failure_criteria": [
+    "Any simpler baseline matches the proposed system on the primary exactness measures with lower implementation cost.",
+    "A consent revocation, late amendment, future-known event or cross-tenant mutation is accepted.",
+    "The evaluation cannot be reproduced from the frozen public artifacts.",
+    "Independent prior-art review identifies the complete candidate combination as already disclosed.",
+    "A reported advantage disappears on the held-out mutation families."
+  ]
+}

@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Add a preregistration draft for evaluating the consent-aware bitemporal Assurance Graph against four simpler baselines.
+- Add a machine-readable protocol boundary and deterministic validation.
+
 ## 0.2.0 - 2026-08-10
 
 - Publish the First Light conformance evidence pack, methodology and measurement boundary.

@@ -14,10 +14,11 @@
   },
   "scripts": {
     "lint": "redocly lint openapi.yaml",
-    "test": "npm run verify:lock && npm run lint && node scripts/check-contract.mjs && npm run test:financial-controls && npm run test:assurance && npm run test:first-light && npm run benchmark",
+    "test": "npm run verify:lock && npm run lint && node scripts/check-contract.mjs && npm run test:financial-controls && npm run test:assurance && npm run test:first-light && npm run test:research-protocol && npm run benchmark",
     "test:financial-controls": "node scripts/check-financial-controls.mjs && node scripts/check-claim-valuation-timeline.mjs",
     "test:assurance": "node scripts/check-assurance-graph.mjs",
     "test:first-light": "node scripts/check-first-light-evidence.mjs",
+    "test:research-protocol": "node scripts/check-research-protocol.mjs",
     "benchmark": "node scripts/run-assurance-benchmark.mjs",
     "verify:lock": "node scripts/check-contract-lock.mjs"
   },
