@@ -60,6 +60,16 @@ The [Evidence Boundary](./benchmarks/first-light/v2/evidence-boundary.md) keeps
 fixed-cohort conformance measurement precise while instrument- and
 population-specific clinical evaluation carries its own reviewed protocol.
 
+## Research candidates
+
+The [consent-aware bitemporal Assurance Graph protocol](./research/consent-aware-bitemporal-assurance-graph/protocol.md)
+defines one candidate contribution, an author [prior-art search](./research/consent-aware-bitemporal-assurance-graph/prior-art-search.md),
+five baselines, evaluation measures and failure criteria. The [Stage 1
+manuscript](./research/consent-aware-bitemporal-assurance-graph/manuscript.md)
+is open for Stage 1 review. Evaluation begins after an independent reviewer
+completes the [review checklist](./research/consent-aware-bitemporal-assurance-graph/reviewer-checklist.md)
+and the protocol is frozen.
+
 ## Add an institutional scenario
 
 1. Start from the smallest fixture that expresses the operating rule.
