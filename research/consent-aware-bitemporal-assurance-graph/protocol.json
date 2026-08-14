@@ -1,18 +1,22 @@
 {
   "schema_version": "1.0.0",
   "protocol_version": "0.1.0",
-  "status": "draft_for_independent_review",
-  "claim_state": "no_novelty_claim",
+  "status": "stage_1_independent_review",
+  "contribution_status": "under_comparative_evaluation",
+  "article_state": "stage_1_protocol_manuscript",
   "reviewed_on": "2026-08-14",
   "results_in_this_revision": false,
   "synthetic_data_only": true,
   "candidate": "consent_aware_bitemporal_assurance_graph",
-  "research_question": "Does combining consent state, effective time, recorded time, accountable capability ownership and executable evidence in one queryable assurance graph improve decision reconstruction and policy-failure detection over simpler traceability, provenance and temporal-ledger baselines?",
+  "research_question": "Does a two-cutoff, consent-conditional assurance-path query with fail-closed path completeness improve decision reconstruction and policy-failure detection over competent traceability, provenance, temporal and consent-aware baselines?",
+  "candidate_claim_scope": "two_cutoff_consent_conditional_assurance_path_reconstruction_with_fail_closed_completeness",
+  "prior_art_assessment": "substantial_ingredient_and_pairwise_overlap_exact_method_unresolved",
   "baselines": [
     { "id": "B0", "name": "static_traceability_matrix" },
     { "id": "B1", "name": "provenance_graph_without_consent_or_bitemporal_queries" },
     { "id": "B2", "name": "bitemporal_event_ledger_without_assurance_links" },
-    { "id": "B3", "name": "consent_aware_single_time_assurance_graph" }
+    { "id": "B3", "name": "consent_aware_single_time_assurance_graph" },
+    { "id": "B4", "name": "consent_aware_temporal_provenance_graph_without_complete_assurance_path" }
   ],
   "metrics": [
     { "id": "M1", "name": "decision_reconstruction_exactness", "direction": "higher" },
@@ -29,14 +33,29 @@
     { "id": "PA3", "authority": "HL7 FHIR Provenance", "url": "https://hl7.org/fhir/provenance.html" },
     { "id": "PA4", "authority": "HL7 FHIR ResearchStudy", "url": "https://hl7.org/fhir/researchstudy.html" },
     { "id": "PA5", "authority": "OMG SACM 2.0", "url": "https://www.omg.org/spec/SACM/2.0/" },
-    { "id": "PA6", "authority": "Snodgrass TQuel temporal model", "url": "https://www2.cs.arizona.edu/~rts/pubs/TODS87.pdf" }
+    { "id": "PA6", "authority": "Snodgrass TQuel temporal model", "url": "https://www2.cs.arizona.edu/~rts/pubs/TODS87.pdf" },
+    { "id": "PA7", "authority": "Temporal Provenance Model", "url": "https://arxiv.org/abs/1211.5009" },
+    { "id": "PA8", "authority": "Healthcare provenance review", "url": "https://pubmed.ncbi.nlm.nih.gov/37514788/" },
+    { "id": "PA9", "authority": "Purpose-based healthcare consent", "url": "https://pubmed.ncbi.nlm.nih.gov/33190460/" },
+    { "id": "PA10", "authority": "OntoGSN", "url": "https://arxiv.org/abs/2506.11023" },
+    { "id": "PA11", "authority": "Compliance-by-Construction Argument Graphs", "url": "https://arxiv.org/abs/2604.04103" },
+    { "id": "PA12", "authority": "US10936732B2 consent provenance", "url": "https://patents.google.com/patent/US10936732B2/en" },
+    { "id": "PA13", "authority": "US12423467B2 consent graph queries", "url": "https://patents.google.com/patent/US12423467B2/en" }
   ],
+  "held_out_plan": {
+    "cases_per_mutation_family": 200,
+    "seed_manifest_frozen_before_implementation": true,
+    "co_primary_metrics": ["M1", "M2"],
+    "paired_test": "mcnemar",
+    "multiple_comparison_correction": "holm",
+    "interval": "wilson_95"
+  },
   "review_gates": [
     { "id": "G1", "required_before": "protocol_freeze", "name": "independent_prior_art_review" },
     { "id": "G2", "required_before": "evaluation", "name": "baseline_implementation_review" },
     { "id": "G3", "required_before": "evaluation", "name": "fixture_and_mutation_freeze" },
     { "id": "G4", "required_before": "contribution_claim", "name": "independent_result_replication" },
-    { "id": "G5", "required_before": "novelty_claim", "name": "research_and_legal_review" }
+    { "id": "G5", "required_before": "scientific_priority_statement", "name": "research_and_legal_review" }
   ],
   "failure_criteria": [
     "Any simpler baseline matches the proposed system on the primary exactness measures with lower implementation cost.",
