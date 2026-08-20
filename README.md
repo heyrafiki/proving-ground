@@ -62,6 +62,15 @@ population-specific clinical evaluation carries its own reviewed protocol.
 
 ## Research candidates
 
+The [Affective Dynamics protocol](./research/affective-dynamics/protocol.md)
+defines the research question, standard comparators, synthetic edge cases,
+failure criteria and independent [review checklist](./research/affective-dynamics/reviewer-checklist.md)
+for person-relative longitudinal context. Run its public boundary check with:
+
+```bash
+npm run test:affective-dynamics
+```
+
 The [consent-aware bitemporal Assurance Graph protocol](./research/consent-aware-bitemporal-assurance-graph/protocol.md)
 defines one candidate contribution, an author [prior-art search](./research/consent-aware-bitemporal-assurance-graph/prior-art-search.md),
 five baselines, evaluation measures and failure criteria. The [Stage 1
