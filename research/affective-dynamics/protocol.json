@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_version": "0.1.0",
+  "status": "public_protocol_for_review",
+  "reviewed_on": "2026-08-20",
+  "results_in_this_revision": false,
+  "synthetic_data_only": true,
+  "research_question": "Can a consent-governed, person-relative longitudinal view preserve useful information about change under irregular sampling while remaining more interpretable and auditable than standard summary measures alone?",
+  "scope": "descriptive_longitudinal_context_for_practitioner_review",
+  "comparators": [
+    { "id": "B0", "name": "within_person_mean_and_variance" },
+    { "id": "B1", "name": "mssd_and_lag_one_autocorrelation_on_regular_intervals" },
+    { "id": "B2", "name": "time_aware_successive_change_summary" },
+    { "id": "B3", "name": "person_relative_governed_longitudinal_view" }
+  ],
+  "evaluation_measures": [
+    { "id": "M1", "name": "metric_availability_decision_exactness", "direction": "higher" },
+    { "id": "M2", "name": "recorded_time_reconstruction_exactness", "direction": "higher" },
+    { "id": "M3", "name": "missingness_transparency", "direction": "higher" },
+    { "id": "M4", "name": "unsupported_recovery_rate", "direction": "lower" },
+    { "id": "M5", "name": "cross_tenant_or_withdrawn_consent_disclosure", "direction": "lower" },
+    { "id": "M6", "name": "practitioner_interpretation_accuracy", "direction": "higher" }
+  ],
+  "established_sources": [
+    { "id": "S1", "citation": "Jahng, Wood and Trull (2008)", "url": "https://doi.org/10.1037/a0014173" },
+    { "id": "S2", "citation": "Kuppens, Allen and Sheeber (2010)", "url": "https://doi.org/10.1177/0956797610372634" },
+    { "id": "S3", "citation": "Houben, Van Den Noortgate and Kuppens (2015)", "url": "https://doi.org/10.1037/a0038822" },
+    { "id": "S4", "citation": "Dejonckheere et al. (2019)", "url": "https://doi.org/10.1038/s41562-019-0555-0" },
+    { "id": "S5", "citation": "McNeish et al. (2021)", "url": "https://doi.org/10.1080/10705511.2021.1915788" },
+    { "id": "S6", "citation": "Schneider et al. (2023)", "url": "https://doi.org/10.3758/s13428-022-01995-1" }
+  ],
+  "required_case_families": [
+    "regular_shift_and_return",
+    "sparse_series",
+    "irregular_intervals",
+    "missing_observation",
+    "constant_series",
+    "changing_personal_baseline",
+    "recorded_time_cutoff",
+    "consent_withdrawal",
+    "cross_tenant_request"
+  ],
+  "failure_criteria": [
+    "A missing observation is silently imputed.",
+    "Lag-one autocorrelation is reported as interpretable for an irregular or constant series.",
+    "Recovery is reported when no return is observed inside the available window.",
+    "An observation recorded after the declared knowledge cutoff changes the reconstructed result.",
+    "Withdrawn Consent or a cross-tenant request returns longitudinal evidence.",
+    "A descriptive pattern is written to the Clinical Record without Practitioner review.",
+    "A more complex view adds no reliable or decision-useful information over a simpler comparator."
+  ],
+  "review_gates": [
+    "measurement_and_population_protocol",
+    "sampling_and_missingness_review",
+    "independent_fixture_review",
+    "practitioner_comprehension_review",
+    "independent_reproduction"
+  ]
+}

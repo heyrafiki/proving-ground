@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "fixture_version": "0.1.0",
+  "synthetic_data_only": true,
+  "dimension": {
+    "label": "Example activation",
+    "minimum": 0,
+    "maximum": 4
+  },
+  "cases": [
+    {
+      "id": "regular_shift_and_return",
+      "family": "regular_shift_and_return",
+      "consent_state": "active",
+      "observations": [
+        { "ref": "obs_r1", "observed_at": "2026-06-01T06:00:00Z", "recorded_at": "2026-06-01T06:01:00Z", "value": 1.9 },
+        { "ref": "obs_r2", "observed_at": "2026-06-02T06:00:00Z", "recorded_at": "2026-06-02T06:02:00Z", "value": 2.0 },
+        { "ref": "obs_r3", "observed_at": "2026-06-03T06:00:00Z", "recorded_at": "2026-06-03T06:01:00Z", "value": 3.4 },
+        { "ref": "obs_r4", "observed_at": "2026-06-04T06:00:00Z", "recorded_at": "2026-06-04T06:03:00Z", "value": 3.6 },
+        { "ref": "obs_r5", "observed_at": "2026-06-05T06:00:00Z", "recorded_at": "2026-06-05T06:01:00Z", "value": 2.1 }
+      ],
+      "expected": { "mean": "available", "variability": "available", "inertia": "available", "recovery": "observed" }
+    },
+    {
+      "id": "sparse_series",
+      "family": "sparse_series",
+      "consent_state": "active",
+      "observations": [
+        { "ref": "obs_s1", "observed_at": "2026-06-01T06:00:00Z", "recorded_at": "2026-06-01T06:01:00Z", "value": 2.1 },
+        { "ref": "obs_s2", "observed_at": "2026-06-08T06:00:00Z", "recorded_at": "2026-06-08T06:01:00Z", "value": 2.5 }
+      ],
+      "expected": { "mean": "insufficient", "variability": "insufficient", "inertia": "insufficient", "recovery": "unresolved" }
+    },
+    {
+      "id": "irregular_intervals",
+      "family": "irregular_intervals",
+      "consent_state": "active",
+      "observations": [
+        { "ref": "obs_i1", "observed_at": "2026-06-01T06:00:00Z", "recorded_at": "2026-06-01T06:01:00Z", "value": 1.7 },
+        { "ref": "obs_i2", "observed_at": "2026-06-01T09:00:00Z", "recorded_at": "2026-06-01T09:01:00Z", "value": 2.0 },
+        { "ref": "obs_i3", "observed_at": "2026-06-03T18:00:00Z", "recorded_at": "2026-06-03T18:02:00Z", "value": 2.8 },
+        { "ref": "obs_i4", "observed_at": "2026-06-09T06:00:00Z", "recorded_at": "2026-06-09T06:01:00Z", "value": 2.2 }
+      ],
+      "expected": { "mean": "available", "variability": "available", "inertia": "not_interpretable", "recovery": "unresolved" }
+    },
+    {
+      "id": "missing_observation",
+      "family": "missing_observation",
+      "consent_state": "active",
+      "declared_missing_at": ["2026-06-03T06:00:00Z"],
+      "observations": [
+        { "ref": "obs_m1", "observed_at": "2026-06-01T06:00:00Z", "recorded_at": "2026-06-01T06:01:00Z", "value": 1.8 },
+        { "ref": "obs_m2", "observed_at": "2026-06-02T06:00:00Z", "recorded_at": "2026-06-02T06:01:00Z", "value": 2.0 },
+        { "ref": "obs_m4", "observed_at": "2026-06-04T06:00:00Z", "recorded_at": "2026-06-04T06:01:00Z", "value": 2.7 },
+        { "ref": "obs_m5", "observed_at": "2026-06-05T06:00:00Z", "recorded_at": "2026-06-05T06:01:00Z", "value": 2.4 }
+      ],
+      "expected": { "missingness": "visible", "imputation": "forbidden", "recovery": "unresolved" }
+    },
+    {
+      "id": "constant_series",
+      "family": "constant_series",
+      "consent_state": "active",
+      "observations": [
+        { "ref": "obs_c1", "observed_at": "2026-06-01T06:00:00Z", "recorded_at": "2026-06-01T06:01:00Z", "value": 2.0 },
+        { "ref": "obs_c2", "observed_at": "2026-06-02T06:00:00Z", "recorded_at": "2026-06-02T06:01:00Z", "value": 2.0 },
+        { "ref": "obs_c3", "observed_at": "2026-06-03T06:00:00Z", "recorded_at": "2026-06-03T06:01:00Z", "value": 2.0 },
+        { "ref": "obs_c4", "observed_at": "2026-06-04T06:00:00Z", "recorded_at": "2026-06-04T06:01:00Z", "value": 2.0 }
+      ],
+      "expected": { "mean": "available", "variability": "available", "inertia": "not_interpretable", "recovery": "not_applicable" }
+    },
+    {
+      "id": "changing_personal_baseline",
+      "family": "changing_personal_baseline",
+      "consent_state": "active",
+      "observations": [
+        { "ref": "obs_b1", "observed_at": "2026-05-01T06:00:00Z", "recorded_at": "2026-05-01T06:01:00Z", "value": 1.4 },
+        { "ref": "obs_b2", "observed_at": "2026-05-08T06:00:00Z", "recorded_at": "2026-05-08T06:01:00Z", "value": 1.6 },
+        { "ref": "obs_b3", "observed_at": "2026-06-01T06:00:00Z", "recorded_at": "2026-06-01T06:01:00Z", "value": 2.1 },
+        { "ref": "obs_b4", "observed_at": "2026-06-08T06:00:00Z", "recorded_at": "2026-06-08T06:01:00Z", "value": 2.2 }
+      ],
+      "expected": { "baseline": "versioned", "comparison": "uses_declared_baseline_window" }
+    },
+    {
+      "id": "recorded_time_cutoff",
+      "family": "recorded_time_cutoff",
+      "consent_state": "active",
+      "knowledge_cutoff": "2026-06-05T12:00:00Z",
+      "observations": [
+        { "ref": "obs_k1", "observed_at": "2026-06-01T06:00:00Z", "recorded_at": "2026-06-01T06:01:00Z", "value": 2.0 },
+        { "ref": "obs_k2", "observed_at": "2026-06-03T06:00:00Z", "recorded_at": "2026-06-03T06:01:00Z", "value": 2.4 },
+        { "ref": "obs_k3", "observed_at": "2026-06-04T06:00:00Z", "recorded_at": "2026-06-07T06:01:00Z", "value": 3.2 }
+      ],
+      "expected": { "included_refs": ["obs_k1", "obs_k2"], "excluded_refs": ["obs_k3"] }
+    },
+    {
+      "id": "consent_withdrawal",
+      "family": "consent_withdrawal",
+      "consent_state": "withdrawn",
+      "observations": [
+        { "ref": "obs_w1", "observed_at": "2026-06-01T06:00:00Z", "recorded_at": "2026-06-01T06:01:00Z", "value": 2.0 }
+      ],
+      "expected": { "read": "denied", "estimate": "denied" }
+    },
+    {
+      "id": "cross_tenant_request",
+      "family": "cross_tenant_request",
+      "consent_state": "active",
+      "evidence_tenant": "synthetic_tenant_a",
+      "request_tenant": "synthetic_tenant_b",
+      "observations": [
+        { "ref": "obs_t1", "observed_at": "2026-06-01T06:00:00Z", "recorded_at": "2026-06-01T06:01:00Z", "value": 2.0 }
+      ],
+      "expected": { "read": "denied", "estimate": "denied" }
+    }
+  ]
+}
