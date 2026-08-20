@@ -1,7 +1,9 @@
 # Affective Dynamics research protocol
 
-Version: 0.1.0  
-Reviewed: 20 August 2026  
+Version: 0.1.0
+
+Reviewed: 20 August 2026
+
 Status: public protocol for review
 
 ## Purpose
