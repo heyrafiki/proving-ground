@@ -2,6 +2,16 @@
 
 Executable conformance evidence for the Heyrafiki contract.
 
+## Where this fits
+
+Important healthcare guarantees should be executable, not aspirational. Proving
+Ground is Heyrafiki's public evidence layer: it turns authorization, financial
+identity, time-aware Claim valuation, First Light boundaries and adverse cases
+into checks an independent reviewer can run.
+
+It is not a clinical validation claim. Clinical and population-specific
+evaluation follows its own protocol, evidence and review path.
+
 Proving Ground turns institutional requirements into tests that engineers,
 actuaries, payers, Practitioners and reviewers can run from the same versioned
 evidence. The suites cover public-contract accountability, Claim financial
