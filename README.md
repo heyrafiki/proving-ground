@@ -1,22 +1,21 @@
 # Proving Ground
 
-Executable conformance evidence for the Heyrafiki contract.
+Open test suites for the Heyrafiki API.
 
-## Where this fits
+## What this repository is for
 
-Important healthcare guarantees should be executable, not aspirational. Proving
-Ground is Heyrafiki's public evidence layer: it turns authorization, financial
-identity, time-aware Claim valuation, First Light boundaries and adverse cases
-into checks an independent reviewer can run.
+Healthcare infrastructure deserves scrutiny. Proving Ground contains test
+suites that anyone can run to inspect how Heyrafiki's public contracts behave:
+who can access information, how Claims and payments are recorded, how early
+Screening results keep their context, and when the system must refuse an action.
 
-It is not a clinical validation claim. Clinical and population-specific
-evaluation follows its own protocol, evidence and review path.
+These tests demonstrate technical behavior. They are not a claim of clinical
+validation, which requires its own protocol, evidence and review.
 
-Proving Ground turns institutional requirements into tests that engineers,
-actuaries, payers, Practitioners and reviewers can run from the same versioned
-evidence. The suites cover public-contract accountability, Claim financial
-identity, bitemporal valuation, early-identification controls and adversarial
-failure handling.
+Proving Ground turns the platform's most important requirements into repeatable
+tests. Engineers, actuaries, payers, Practitioners and reviewers can run the
+same versioned suites to inspect API behavior, financial consistency,
+early-Screening safeguards and deliberately invalid cases.
 
 ## Run the benchmark
 
