@@ -24,7 +24,7 @@
     "verify:lock": "node scripts/check-contract-lock.mjs"
   },
   "devDependencies": {
-    "@redocly/cli": "2.44.2",
+    "@redocly/cli": "2.49.0",
     "ajv": "8.20.0",
     "ajv-formats": "3.0.1",
     "yaml": "2.9.0"
